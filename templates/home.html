@@ -1,0 +1,115 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Credit Fraud Detection Application</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Credit Fraud Detection Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Limit Balance</label>
+            <input class="form-control" type="number" name="limit_bal" placeholder="Enter Limit Balance" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Sex</label>
+            <select class="form-control" name="sex" placeholder="Enter your Sex" required>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select>
+        </div>
+        
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Education</label>
+            <select class="form-control" name="education" placeholder="Enter your Education" required>
+                <option value="1">Graduate</option>
+                <option value="2">Profrssional</option>
+                <option value="3">Student</option>
+                <option value="4">Univesity</option>
+                <option value="5">Master</option>
+                <option value="6">others</option>
+            </select> 
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Marriage</label>
+            <select class="form-control" name="marriage" placeholder="Enter your Marriage" required>
+                <option value="1">married</option>
+                <option value="2">unmarried</option>
+                <option value="3">Student</option>
+                <option value="4">other</option>
+            </select>
+            
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age" placeholder="Enter your Age" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Payment 0</label>
+            <input class="form-control" type="number" step="any" name="pay_1" placeholder="Enter Payment 0" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Payment 2</label>
+            <input class="form-control" type="number" step="any" name="pay_2" placeholder="Enter Payment 2" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Payment 3</label>
+            <input class="form-control" type="number" step="any" name="pay_3" placeholder="Enter Payment 3" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Payment 4</label>
+            <input class="form-control" type="number" step="any" name="pay_4" placeholder="Enter Payment 4" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Payment 5 </label>
+            <input class="form-control" type="number" step="any" name="pay_5" placeholder="Enter Payment 5" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Payment 6</label>
+            <input class="form-control" type="number" step="any" name="pay_6" placeholder="Enter Payment 6" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bill Amount 1</label>
+            <input class="form-control" type="number" name="bill_amt1" placeholder="Enter Bill Amount 1" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bill Amount 2</label>
+            <input class="form-control" type="number" name="bill_amt2" placeholder="Enter Bill Amount 2" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bill Amount 3</label>
+            <input class="form-control" type="number" name="bill_amt3" placeholder="Enter Bill Amount 3" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bill Amount 4</label>
+            <input class="form-control" type="number" name="bill_amt4" placeholder="Enter Bill Amount 4" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bill Amount 5</label>
+            <input class="form-control" type="number" name="bill_amt5" placeholder="Enter Bill Amount 5" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bill Amount 6</label>
+            <input class="form-control" type="number" name="bill_amt6" placeholder="Enter Bill Amount 6" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">pay Amount 1</label>
+            <input class="form-control" type="number" name="pay_amt1" placeholder="Enter Pay Amount 1" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">pay Amount 2</label>
+            <input class="form-control" type="number" name="pay_amt2" placeholder="Enter pay Amount 2" required>
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict">
+        
+        </div>
+    </form>
+    <h2>
+       THE prediction is {{prediction_text}}
+    </h2>
+   <body>
+</html>
